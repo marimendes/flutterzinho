@@ -15,5 +15,4 @@ class Item {
     data['done'] = this.done;
     return data;
   }
-
 }
