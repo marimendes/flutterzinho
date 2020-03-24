@@ -5,5 +5,4 @@ main(){
   print(a);
   print(a * b);
   print(1+2*4);
-
 }
