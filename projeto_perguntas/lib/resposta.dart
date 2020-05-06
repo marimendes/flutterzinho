@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 
 class Resposta extends StatelessWidget {
   final String texto;
-  Resposta(this.texto);
+  final void Function() onPressed;
+
+  Resposta(this.texto, this.onPressed);
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      child: Text(texto),
-      onPressed: null,
+    return Container(
+      width: double.infinity,
+      child: RaisedButton(
+        color: Colors.blueAccent,
+        textColor: Colors.white,
+        child: Text(texto),
+        onPressed: onPressed,
+      ),
     );
   }
 }
