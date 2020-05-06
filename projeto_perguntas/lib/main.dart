@@ -4,13 +4,16 @@ main() {
   runApp(new PerguntaApp());
 }
 
-class PerguntaApp extends StatelessWidget{
-  
+class PerguntaAppState extends State<PerguntaApp> {
+
+  var perguntaSelecionada = 0;
+
   void responder(){
+    perguntaSelecionada++;
     print('Pergunta respondida!');
   }
 
-  @override
+   @override
   Widget build(BuildContext context){
     final perguntas = [
       'Qual é a sua cor favorita?',
@@ -41,5 +44,14 @@ class PerguntaApp extends StatelessWidget{
         ),
       ),
     );
+  }
+
+}
+
+class PerguntaApp extends StatefulWidget{
+
+  @override
+  PerguntaAppState createState() {
+    return PerguntaAppState();
   }
 }
