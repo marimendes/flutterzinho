@@ -63,8 +63,16 @@ class _PerguntaAppState extends State<PerguntaApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text('Perguntas'),
+          backgroundColor: Colors.pink,
+          actions: <Widget>[
+            Icon(
+              Icons.favorite,
+              color: Colors.white, 
+            )
+          ],
         ),
         body: temPerguntaSelecionada
             ? Questionario(
